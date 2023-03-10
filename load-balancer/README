@@ -1,0 +1,15 @@
+## Tiron Teodor 314CA
+
+The program creates a load balancer using consistent hashing. Multiple
+server tags are stored on a hashring and whenever an object is stored 
+in the load balancer, it is added to the server whose tag has the lowest
+hash value greater than the object's hash value.
+
+When one server is removed, all of its objects are copied in temporary
+storage. The server and its tags are removed from the hashring and the
+objects in the temporary storage are added once again to the load balancer.
+
+When one server is added, each of the new server replicas copies elements from
+the server whose tag is situated after the current server replica's tag. After
+the new servers receive their corresponding objects, those objects are removed
+from their initial server.

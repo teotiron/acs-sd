@@ -1,0 +1,12 @@
+## Tiron Teodor 314CA
+
+The program simulates a galactic war between planets. Each planet has a
+line of defense composed of shields, whose values are represented by integers.
+Both the shield and the galaxy are implemented using a generic circular doubly
+linked list that has the basic functions implemented (creation, adding a node,
+removing a node, freeing the memory).
+
+The program reads an integer M and M lines that represent actions. These
+commands enable the user to add, remove, delete and collide planets and to
+modify each planet's shield list. After the M lines have been read, the program
+frees the memory used by the galaxy.
